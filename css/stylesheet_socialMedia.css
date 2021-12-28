@@ -1,0 +1,58 @@
+
+@media (min-width: 480px){
+    *
+    {
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        font-family: 'poppins' sans-serif;
+    }
+    /* #container {
+        height: 100vh;
+        width: 100%;
+        
+        top: 0;
+        left: 0;
+        background:#e9e9eb4b;
+      
+        
+    } */
+    html { 
+        background: url('../image/kindpng_42589462.png') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      footer {
+        grid-area: social;
+        display: flex;
+        flex-direction: column;
+        background: #1c5da4;
+        height:500px;
+        align-items: left;
+        justify-content: center;
+        
+        width:35px;
+        border-radius: 60px 0 0 60px;
+        right: 20px;
+        z-index: 9999;
+      }
+      footer:hover{
+        background:#000;
+      }
+      footer a{
+        text-decoration: none;
+        height: 40px;
+        width: 40px;
+        color: #e9e9eb;
+        font-size:23px;
+        display:grid;
+        place-items: left;
+        margin:30px 0;
+      }
+      footer a:hover{
+        color:#1b66bb;
+    
+      }
+}

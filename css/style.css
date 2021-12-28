@@ -1,0 +1,27 @@
+*{
+
+}
+body{
+    display:grid;
+    
+    justify-items:center;
+    grid-template-areas:"empty nav empty"
+                        "empty con social"
+                        "empty con social";
+    grid-template-columns: 35px 1fr 35px;
+    grid-template-rows:1fr 1fr 1fr;
+}
+/* #page > header { */
+#container > con {
+    grid-area:con;
+    width: 100%;
+}
+#empty > empty{
+    grid-area: empty;
+}
+#header > nav{
+    grid-area: nav;
+}
+#social > social{
+    grid-area: social;
+}
