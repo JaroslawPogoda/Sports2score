@@ -5,11 +5,13 @@ body{
     display:grid;
     
     justify-items:center;
-    grid-template-areas:"empty nav empty"
+    grid-template-columns: 35px 1fr 35px;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-areas:"empty nav nav"
+                        "empty con social"
                         "empty con social"
                         "empty con social";
-    grid-template-columns: 35px 1fr 35px;
-    grid-template-rows:1fr 1fr 1fr;
+    
 }
 /* #page > header { */
 #container > con {
