@@ -1,29 +1,27 @@
-*{
 
-}
 body{
     display:grid;
-    
-    justify-items:center;
+
     grid-template-columns: 35px 1fr 35px;
     grid-template-rows:1fr 1fr 1fr 1fr;
     grid-template-areas:"empty nav nav"
-                        "empty con social"
-                        "empty con social"
-                        "empty con social";
+                        "empty container social"
+                        "empty container social"
+                        "empty container social";
     
 }
+
 /* #page > header { */
-#container > con {
-    grid-area:con;
-    width: 100%;
-}
-#empty > empty{
+
+#empty {
     grid-area: empty;
 }
-#header > nav{
+#header {
     grid-area: nav;
 }
-#social > social{
+#container  {
+    grid-area: container;
+}
+#social {
     grid-area: social;
 }
