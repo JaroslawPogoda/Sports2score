@@ -5,9 +5,9 @@ body{
     grid-template-columns: 35px 50px 1fr 50px 35px;
     grid-template-rows:1fr 1fr 1fr 1fr;
     grid-template-areas:"empty nav nav nav nav"
-                        "empty container container nothingup social"
-                        "empty container container arrow-right social"
-                        "empty container container nothingdwn social";
+                        "empty nothinglup container nothingup social"
+                        "empty arrow-left container arrow-right social"
+                        "empty nothingldwn container nothingdwn social";
     
 }
 
@@ -36,10 +36,20 @@ th{
 .arrow {
     grid-area: arrow-right;
     font-size: 128px;
-    color: #fff;
+    color: rgb(151, 149, 149);
     opacity: 70%;
     border:1px;
 }
 .arrow:hover {
+    color:#1b66bb;
+}
+.arrow2 {
+    grid-area: arrow-left;
+    font-size: 128px;
+    color: rgb(161, 159, 159);
+    opacity: 70%;
+    border:1px;
+}
+.arrow2:hover {
     color:#1b66bb;
 }
