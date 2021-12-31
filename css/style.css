@@ -1,13 +1,13 @@
 
 body{
     display:grid;
-
-    grid-template-columns: 35px 1fr 35px;
+    justify-items: center;
+    grid-template-columns: 35px 50px 1fr 50px 35px;
     grid-template-rows:1fr 1fr 1fr 1fr;
-    grid-template-areas:"empty nav nav"
-                        "empty container social"
-                        "empty container social"
-                        "empty container social";
+    grid-template-areas:"empty nav nav nav nav"
+                        "empty container container nothingup social"
+                        "empty container container arrow-right social"
+                        "empty container container nothingdwn social";
     
 }
 
@@ -24,4 +24,22 @@ body{
 }
 #social {
     grid-area: social;
+}
+.table_league{
+    background:#fff;
+    opacity: 70%;
+}
+th{
+    margin:7px;
+    padding:7px;
+}
+.arrow {
+    grid-area: arrow-right;
+    font-size: 128px;
+    color: #fff;
+    opacity: 70%;
+    border:1px;
+}
+.arrow:hover {
+    color:#1b66bb;
 }
