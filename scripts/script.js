@@ -28,8 +28,8 @@ function compare(a, b) {
   return 0;
 }
 let addToTable = (data) => {
-  table.innerHTML += `<tr id="table_for_league" onclick="getFixturesForTeam('${data.team_id}')"><td>${data.rank}</td><td>${data.name}</td> <td>${data.matches}</td><td>${data.points}</td> <td>${data.won}</td> <td>${data.lost}</td><td>${data.drawn}</td><td>${data.goal_diff}</td> <td>${data.goals_conceded}</td> <td>${data.goals_scored}</td></tr>
-  <tr><td span=10></tr>`;
+  table.innerHTML += `<tr id="table_for_league${data.team_id}" onclick="getFixturesForTeam('${data.team_id}')"><td>${data.rank}</td><td>${data.name}</td> <td>${data.matches}</td><td>${data.points}</td> <td>${data.won}</td> <td>${data.lost}</td><td>${data.drawn}</td><td>${data.goal_diff}</td> <td>${data.goals_conceded}</td> <td>${data.goals_scored}</td></tr>
+  <tr><td colspan="10" id = "fixtures${data.team_id}"></td></tr>`;
   //getFixturesForTeam(data.team_id)
 };
 function getCompetitonsName() {
@@ -158,7 +158,70 @@ fetch(`https://live-score-api.p.rapidapi.com/fixtures/matches.json?secret=obxADu
 	}
 })
 .then(response => response.json())
-.then(data=>console.log(data.data))
+.then(data=>{
+  let tdFixturesDoc =document.getElementById(`fixtures${idOfTeam}`)
+  let tdFixturesDoc2 =document.querySelector(`.match${idOfTeam}`)
+  if(tdFixturesDoc2!=null && tdFixturesDoc2.style.display=="none"){
+    console.log("inside if")
+    tdFixturesDoc2.style.display="table-cell"
+}
+else if(tdFixturesDoc2!=null){
+  console.log("inside else if")
+  tdFixturesDoc2.style.display="none"
+}
+else{
+  console.log(tdFixturesDoc2)
+  console.log("inside else")
+  tdFixturesDoc.innerHTML=`<div class="container2">
+  <ion-icon class="arrow3 thatarrow3" name="chevron-forward-outline" ></ion-icon>
+
+	<div class="match match${idOfTeam}">
+		<div class="match-header">
+			<div class="match-tournament"><img src="" />${data.data.fixtures[0].competition.name}</div>
+      <div></div>
+		</div>
+		<div class="match-content">
+			<div class="column">
+				<div class="team team--home">
+					<h2 class="team-name">${data.data.fixtures[0].home_name}</h2>
+				</div>
+			</div>
+			<div class="column">
+				<div class="match-details">
+					<div class="match-date">
+						${data.data.fixtures[0].date} at <strong>${data.data.fixtures[0].time}</strong>
+					</div>
+					<div class="match-score">
+						<span class="match-score-divider">vs.</span>
+					</div>
+					<div class="match-referee">
+						Location: <strong>${data.data.fixtures[0].location}</strong>
+					</div>
+					<div class="match-bet-options">
+						<button class="match-bet-option">${data.data.fixtures[0].odds.live[1]}</button>
+						<button class="match-bet-option">${data.data.fixtures[0].odds.live[2]}</button>
+						<button class="match-bet-option">${data.data.fixtures[0].odds.live.X}</button>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="team team--away">
+					<h2 class="team-name"> ${data.data.fixtures[0].away_name}</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div>
+  <div>
+    <div></div>
+  </div>
+  <ion-icon class="arrow3 thatarrow4" name="chevron-back-outline" ></ion-icon>
+</div>
+`
+}
+  console.log(data.data.fixtures)
+  console.log(data.data)})
 .catch(err => {
 	console.error(err);
 });

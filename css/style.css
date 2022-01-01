@@ -3,7 +3,7 @@ body{
     display:grid;
     justify-items: center;
     grid-template-columns: 35px 50px 1fr 50px 35px;
-    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-rows:150px 1fr 1fr 1fr;
     grid-template-areas:"empty nav nav nav nav"
                         "empty nothinglup container nothingup social"
                         "empty arrow-left container arrow-right social"
@@ -21,6 +21,7 @@ body{
 }
 #container  {
     grid-area: container;
+    box-shadow: 0 0 10px rgba(0,31,1);
 }
 #social {
     grid-area: social;
@@ -30,9 +31,11 @@ body{
     opacity: 70%;
 }
 th{
-    margin:7px;
-    padding:7px;
+    margin:0 4px 4px 0;
+    padding:0 4px 4px 0;
+    box-shadow: 0 0 1px rgba(0,31,1);
 }
+
 .arrow {
     grid-area: arrow-right;
     font-size: 128px;
