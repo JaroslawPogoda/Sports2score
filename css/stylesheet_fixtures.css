@@ -211,23 +211,36 @@ body {
 
 .container2 {
 	position: relative;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 	width: 100%;
 	display: grid;
-	
-	grid-template-areas: "arrow-right2 containterinner nextgame arrow-left2"
-						"arrow-right2 containterinner 3rdgame arrow-left2";
-	grid-template-columns: 50px 1fr 0.3fr 50px;
+	grid-template-areas: "arrow-right2 containterinner arrow-left2"
+						"arrow-right2 containterinner arrow-left2";
+	grid-template-columns: 128px 1fr 128px;
 	grid-template-rows: 1fr 1fr;
-	justify-content: center;
-	align-items: center;
 }
-.thatarrow3{
-	grid-area: arrow-right;
+.arrow3 {
+	grid-area: arrow-left2;
+    font-size: 96px;
+    color: rgb(243, 124, 124);
+    opacity: 70%;
+    border:1px;
 }
-.thatarrow4{
-	grid-area:arrow-left;
+.arrow4 {
+	grid-area:arrow-right2;
+    font-size: 96px;
+    color: rgb(243, 124, 124);
+    opacity: 70%;
+    border:1px;
+}
+.arrow4:hover {
+	color:#1b66bb;
+	transform: scale(1.5);
+}
+.arrow3:hover {
+	color:#1b66bb;
+	transform: scale(1.5);
+}
+.match{
+	grid-area:containterinner;
+
 }
