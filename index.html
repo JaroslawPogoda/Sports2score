@@ -52,12 +52,31 @@
         </ul>
         </nav>
       <div id=burgermenu>
-        <img
-          width="56px"
-          height="56px"
-          src="image/burgermenu.png"
-          alt="Burger Menu"
-        />
+        <ul class="menu">
+          <li class="list active">
+            <a href="#">
+              <span class="icon-bar"><ion-icon name="home-outline"></ion-icon></span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="pages/aboutus.html">
+              <span class="icon-bar"><ion-icon name="people-outline"></ion-icon></span>
+              <span class="text">About Us</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="pages/contactus.html">
+              <span class="icon-bar"><ion-icon name="help-circle-outline"></ion-icon></span>
+              <span class="text">Contact Us</span>
+            </a>
+          </li>
+        </ul>
+        <button class="hamburger">
+          <!-- material icons https://material.io/resources/icons/ -->
+          <i class="menuIcon material-icons">menu</i>
+          <i class="closeIcon material-icons">close</i>
+        </button>
       </div>
     </header>
     
@@ -66,7 +85,7 @@
 <!-- current workspace -->
 <div id="container"><p id="league">The league </p>
 <table class="table_league"><tr><select id="leagues" ></select></tr>
-  <tr><th>rank:</th><th>name:</th> <th>matches:</th><th>points:</th> <th>won:</th> <th>lost:</th><th>drawn:</th><th>goal_diff:</th> <th>goals_conceded:</th> <th>goals_scored:</th></tr></table></tr></table>
+  <tr><th>Rank:</th><th>Name:</th> <th>Matches:</th><th>Points:</th> <th class="visibleOnMobile">Won:</th> <th class="visibleOnMobile">Lost:</th><th class="visibleOnMobile">Drawn:</th><th class="visibleOnMobile">Difference:</th> <th class="visibleOnMobile">Conceded:</th> <th class="visibleOnMobile">Scored:</th></tr></table></tr></table>
 </div>
 <ion-icon class="arrow thatarrow" name="chevron-forward-outline" ></ion-icon>
 <ion-icon class="arrow2 thatarrow2" name="chevron-back-outline" ></ion-icon>
@@ -78,7 +97,7 @@
 
 
 <!-- end of current workspace -->
-
+<script type="text/javascript" src="scripts/burgermenu.js"></script>
     <script type="text/javascript" src="scripts/navbar.js"></script>
     <!-- <script type="module" src="scripts/script.js"></script> -->
     <script type="text/javascript" src="scripts/script.js"></script>

@@ -28,7 +28,7 @@ function compare(a, b) {
   return 0;
 }
 let addToTable = (data) => {
-  table.innerHTML += `<tr id="table_for_league${data.team_id}" onclick="getFixturesForTeam('${data.team_id}')"><td>${data.rank}</td><td>${data.name}</td> <td>${data.matches}</td><td>${data.points}</td> <td>${data.won}</td> <td>${data.lost}</td><td>${data.drawn}</td><td>${data.goal_diff}</td> <td>${data.goals_conceded}</td> <td>${data.goals_scored}</td></tr>
+  table.innerHTML += `<tr id="table_for_league${data.team_id}" onclick="getFixturesForTeam('${data.team_id}')"><td>${data.rank}</td><td>${data.name}</td> <td>${data.matches}</td><td>${data.points}</td> <td class="visibleOnMobile">${data.won}</td> <td class="visibleOnMobile">${data.lost}</td><td class="visibleOnMobile">${data.drawn}</td><td class="visibleOnMobile">${data.goal_diff}</td> <td class="visibleOnMobile">${data.goals_conceded}</td> <td class="visibleOnMobile">${data.goals_scored}</td></tr>
   <tr><td colspan="10" id = "fixtures${data.team_id}"></td></tr>`;
   //getFixturesForTeam(data.team_id)
 };
@@ -100,7 +100,7 @@ function getDatafromApi(competition_id) {
       if (data.data.table[0]) {
         lookfor = data.data.table[0].competition_id;
         table.innerHTML =
-          '<table class="table_league"><tr><th>rank:</th><th>name:</th> <th>matches:</th><th>points:</th> <th>won:</th> <th>lost:</th><th>drawn:</th><th>goal_diff:</th> <th>goals_conceded:</th> <th>goals_scored:</th></tr></table></tr></table>';
+          '<table class="table_league"><tr><th>Rank:</th><th>Name:</th> <th>Matches:</th><th>Points:</th> <th  class="visibleOnMobile">Won:</th> <th  class="visibleOnMobile">Lost:</th><th class="visibleOnMobile">Drawn:</th><th class="visibleOnMobile">Difference:</th> <th  class="visibleOnMobile">Conceded:</th> <th class="visibleOnMobile">Scored:</th></tr></table></tr></table>';
         leagueTitle.innerText = "The league";
         for (let i = 0; i < data.data.table.length; i++) {
           addToTable(data.data.table[i]);

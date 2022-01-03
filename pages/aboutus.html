@@ -48,12 +48,31 @@
           </ul>
           </nav>
         <div id=burgermenu>
-          <img
-            width="56px"
-            height="56px"
-            src="../image/burgermenu.png"
-            alt="Burger Menu"
-          />
+            <ul class="menu">
+                <li class="list">
+                    <a href="../index.html">
+                      <span class="icon-bar"><ion-icon name="home-outline"></ion-icon></span>
+                      <span class="text">Home</span>
+                    </a>
+                  </li>
+                  <li class="list active">
+                    <a href="#">
+                      <span class="icon-bar"><ion-icon name="people-outline"></ion-icon></span>
+                      <span class="text">About Us</span>
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../pages/contactus.html">
+                      <span class="icon-bar"><ion-icon name="help-circle-outline"></ion-icon></span>
+                      <span class="text">Contact Us</span>
+                    </a>
+                  </li>
+              </ul>
+              <button class="hamburger">
+                <!-- material icons https://material.io/resources/icons/ -->
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+              </button>
         </div>
       </header>
       <div id="container"><p><h3>FOOTBALL THROUGH THE EYES OF THE FAN</h3>
@@ -77,6 +96,7 @@
       </footer>
       
   <!-- end of navigation -->
+  <script type="text/javascript" src="../scripts/burgermenu.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script type="text/javascript" src="../scripts/navbar.js"></script>
