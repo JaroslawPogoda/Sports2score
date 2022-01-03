@@ -252,13 +252,13 @@ function getFixturesForTeam(idOfTeam, index = 0) {
             )[0].innerHTML = `Location: <strong>${data.data.fixtures[index].location}</strong>`;
             document.getElementsByClassName(
               `match-bet-option1${idOfTeam}`
-            )[0].innerText = data.data.fixtures[index].odds.live[1];
+            )[0].innerHTML = data.data.fixtures[index].odds.live[1];
             document.getElementsByClassName(
               `match-bet-option2${idOfTeam}`
-            )[0].innerText = data.data.fixtures[index].odds.live[2];
+            )[0].innerHTML = data.data.fixtures[index].odds.live[2];
             document.getElementsByClassName(
               `match-bet-option3${idOfTeam}`
-            )[0].innerText = data.data.fixtures[index].odds.live.X;
+            )[0].innerHTML = data.data.fixtures[index].odds.live.X;
             document.getElementsByClassName(
               `team-nameh${idOfTeam}`
             )[0].innerText = data.data.fixtures[index].away_name;
