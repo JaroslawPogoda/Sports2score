@@ -53,6 +53,6 @@
       }
       footer a:hover{
         color:#1b66bb;
-    
+        transform:scale(1.009);
       }
 }

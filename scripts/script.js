@@ -174,7 +174,7 @@ function getFixturesForTeam(idOfTeam, index = 0) {
 		<div class="match-content">
 			<div class="column">
 				<div class="team team--home${idOfTeam}">
-					<h2 class="team-nameh${idOfTeam}">${data.data.fixtures[index].home_name}</h2>
+					<h2 class="team-name team-nameh${idOfTeam}">${data.data.fixtures[index].home_name}</h2>
 				</div>
 			</div>
 			<div class="column">
@@ -197,7 +197,7 @@ function getFixturesForTeam(idOfTeam, index = 0) {
 			</div>
 			<div class="column">
 				<div class="team team--away">
-					<h2 class="team-namea${idOfTeam}"> ${data.data.fixtures[index].away_name}</h2>
+					<h2 class="team-name team-namea${idOfTeam}"> ${data.data.fixtures[index].away_name}</h2>
 				</div>
 			</div>
 		</div>
