@@ -1,10 +1,12 @@
+//initializing global variables constants
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger= document.querySelector(".hamburger");
 const closeIcon= document.querySelector(".closeIcon");
 const menuIcon = document.querySelector(".menuIcon");
 const container=document.querySelector("#container");
-
+//declaration of tuggle function
+//hide and show menu
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
@@ -20,9 +22,9 @@ function toggleMenu() {
 
   }
 }
-
+// add event listener to burger button
 hamburger.addEventListener("click", toggleMenu);
-
+//adding all items for menu and making them clickable
 menuItems.forEach( 
     function(menuItem) { 
       menuItem.addEventListener("click", toggleMenu);
